@@ -1,0 +1,258 @@
+/* Simple responsive design for Level 4 students */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+}
+
+.site-header {
+    background-color: darkslategray;
+    color: white;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.site-header p {
+    margin: 4px 0 0;
+    font-size: 14px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 12px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: darkslategray;
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+textarea {
+    min-height: 90px;
+}
+
+.checkbox-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.checkbox-row input {
+    width: auto;
+}
+
+.btn {
+    display: inline-block;
+    background-color: darkslategray;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.btn:hover {
+    background-color: #550000;
+}
+
+.btn-secondary {
+    background-color: #555;
+}
+
+.btn-approve {
+    background-color: #0b7a28;
+}
+
+.btn-reject {
+    background-color: #b00020;
+}
+
+.message-success {
+    background-color: #e7f7ea;
+    color: #0b6b24;
+    padding: 12px;
+    border-left: 5px solid #0b6b24;
+    margin-bottom: 15px;
+}
+
+.message-error {
+    background-color: #fdeaea;
+    color: #9b0000;
+    padding: 12px;
+    border-left: 5px solid #9b0000;
+    margin-bottom: 15px;
+}
+
+.status-pending {
+    color: #b36b00;
+    font-weight: bold;
+}
+
+.status-approved {
+    color: #0b7a28;
+    font-weight: bold;
+}
+
+.status-rejected {
+    color: #b00020;
+    font-weight: bold;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: darkslategray;
+    color: white;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.stat-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.stat-box h3 {
+    margin: 0;
+    font-size: 32px;
+    color: darkslategray;
+}
+
+.id-card {
+    width: 380px;
+    max-width: 100%;
+    border: 2px solid darkslategray;
+    border-radius: 12px;
+    padding: 20px;
+    background-color: white;
+    margin-top: 20px;
+}
+
+.id-card h3 {
+    background-color: darkslategray;
+    color: white;
+    padding: 10px;
+    margin: -20px -20px 15px -20px;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+}
+
+.site-footer {
+    background-color: darkslategray;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 18px 20px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 6px 8px 0 0;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media print {
+    .site-header, .site-footer, form, .btn, nav {
+        display: none;
+    }
+
+    body {
+        background-color: white;
+    }
+
+    .card {
+        box-shadow: none;
+    }
+}
